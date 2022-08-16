@@ -1,0 +1,32 @@
+#####
+name: HdGan
+noise_level: 1  #  noise level
+port: 8097   #  port parameters 6019 8097
+save_root: './output/Hd/model3/' #多尺度判别
+image_save: './output/Hd/img1/e3'#img2 disease    4 modify
+#image_save: './output/Hd/testy/'
+
+# lamda weight
+Adv_lamda1: 1 #1
+Adv_lamda2: 0.1 #0.1 1
+Cyc_lamda: 10
+Corr_lamda1: 20 #20
+Corr_lamda2: 2 # 1
+Smooth_lamda: 10 #10
+
+epoch: 0       # starting epoch
+n_epochs: 45       # How often do you want to display output images during training
+batchSize: 1               # size of the batches  train:4 test:1
+train_list: './data/train.txt'     # root directory of the dataset
+val_list: './data/val2.txt' #testy
+test_list: './data/test1.txt' #testd2  val1 val2 test1 test2d2
+lr: 0.0001                   # initial learning rate
+lrd: 0.0001 #0.00002
+decay_epoch: 20            # epoch to start linearly decaying the learning rate to 0
+size: 512                # size of the data crop
+input_nc: 1
+output_nc: 1                  
+cuda: True                
+n_cpu: 1
+
+
